@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#" id="main_form">
+        <input type="number" id="num1">
+        <br>
+        <button onclick="checkNumber();" id="check_button">Check</button>
+        <button onclick="resetnew()" id="reset_button" style="display: none;">Reset</button>
+        <p id="result" style="color: red;"></p>
+    </form>
+    <script>
+        function checkNumber() {
+            document.getElementById("check_button").style.display = "none";
+            document.getElementById("reset_button").style.display = "block";
+            var x = parseInt(document.getElementById("num1").value);
+            if (x % 2 == 0){
+               var text = document.getElementById("result").innerHTML = x + " is even";
+            }
+            else {
+                var text = document.getElementById("result").innerHTML = x + " is odd";
+            }
+        }
+        function resetnew() {
+        document.getElementById("reset_button").style.display = "none";
+       document.getElementById("check_button").style.display = "block";
+       document.getElementById("num1").value = "";
+       document.getElementById("result").innerHTML = "";
+       document.getElementById("resetnew").style.display = "none";
+        }
+    
+    
+    </script>
+</body>
+</html>
